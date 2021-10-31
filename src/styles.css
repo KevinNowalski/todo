@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+}
+
+button{
+    width: 15px; 
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    margin-right: 5px;
+    border:1px solid #000
+}
+
+button:hover{
+    background: #000;
+}
+
+#todo-input{
+    display: flex;
+    align-items: center
+}
+
+#todo-input input {
+    height: 43px;
+    width: 240px;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+#todo-items {
+    margin: 15px 0 0;
+}
+
+#todo-items ul{
+    list-style: none;
+}
+
+#todo-items ul li{
+    display: flex;
+    align-items: center;
+}
