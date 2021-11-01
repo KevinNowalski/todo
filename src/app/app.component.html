@@ -1,8 +1,8 @@
 <div class="container">
   <app-header></app-header>
   <div id="todo-input">
-    <button (click)="addTodo(task.value)"></button>
-    <input type="text" placeholder="Create a new todo..." #task />
+    <button (click)="addTodo(todo.value)"></button>
+    <input type="text" placeholder="Create a new todo..." #todo (keydown.enter)="addTodo(todo.value)">
   </div>
   <div id="todo-items">
     <ul *ngFor="let item of list">
