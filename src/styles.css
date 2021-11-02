@@ -10,8 +10,20 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-color: #181824;
   color: #fff;
-  min-height: 300px;
-  padding: 30px
+  font-size: 17.5px;
+  position: relative;
+}
+
+body:after {
+  content: '';
+  background: url('assets/images/bg-desktop-dark.jpg') center no-repeat;
+  background-size: cover;
+  height: 301px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .container {
@@ -21,17 +33,24 @@ body {
 }
 
 button {
-    width: 20px; 
-    height: 20px;
+    width: 25px; 
+    height: 25px;
     border-radius: 50%;
     cursor: pointer;
     background: none;
     margin-right: 5px;
-    border:1px solid #ffff
+    border:2px solid #323449
 }
 
 button:hover {
-    background: #fff;
+  background: rgba(109,192,255,1);
+  background: -moz-linear-gradient(-45deg, rgba(109,192,255,1) 0%, rgba(129,173,248,1) 28%, rgba(141,164,255,1) 51%, rgba(148,132,251,1) 71%, rgba(164,123,245,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(109,192,255,1)), color-stop(28%, rgba(129,173,248,1)), color-stop(51%, rgba(141,164,255,1)), color-stop(71%, rgba(148,132,251,1)), color-stop(100%, rgba(164,123,245,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(109,192,255,1) 0%, rgba(129,173,248,1) 28%, rgba(141,164,255,1) 51%, rgba(148,132,251,1) 71%, rgba(164,123,245,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(109,192,255,1) 0%, rgba(129,173,248,1) 28%, rgba(141,164,255,1) 51%, rgba(148,132,251,1) 71%, rgba(164,123,245,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(109,192,255,1) 0%, rgba(129,173,248,1) 28%, rgba(141,164,255,1) 51%, rgba(148,132,251,1) 71%, rgba(164,123,245,1) 100%);
+  background: linear-gradient(135deg, rgba(109,192,255,1) 0%, rgba(129,173,248,1) 28%, rgba(141,164,255,1) 51%, rgba(148,132,251,1) 71%, rgba(164,123,245,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dc0ff', endColorstr='#a47bf5', GradientType=1 );
 }
 
 input {
@@ -41,6 +60,10 @@ input {
 
 
 input::placeholder{
-    color: #cbcde4;
+    color: #686a7f;
     opacity: 1;
+}
+
+a {
+  color: #fff;
 }

@@ -1,15 +1,18 @@
-  <app-header></app-header>
   <div id="todo">
-    <div class="container">
-      <div id="todo-input">
-        <button [disabled]="!todo" (click)="addTodo(todo)" class="add"></button>
-        <input type="text" placeholder="Create a new todo..." [(ngModel)]="todo" (keydown.enter)="todo ? addTodo(todo) : null">
+    <app-header></app-header>
+    <main>
+      <div class="container">
+        <div id="todo-input">
+          <button [disabled]="!todo" (click)="addTodo(todo)" class="add"></button>
+          <input type="text" placeholder="Create a new todo..." [(ngModel)]="todo" (keydown.enter)="todo ? addTodo(todo) : null">
+        </div>
+        <div id="todo-items">
+          <ul>
+            <li *ngFor="let item of list; let i=index;" [ngClass]="{'done-checked': toggle[i], 'done': !toggle[i]}" (click)="toggle[i] = !toggle[i]"><button></button>{{item.name}}<button (click)="removeTodo(item.id)" class="remove"></button></li>
+          </ul>
+        </div>
       </div>
-      <div id="todo-items">
-        <ul *ngFor="let item of list; let i=index;">
-          <li [ngClass]="{'done-checked': toggle[i], 'done': !toggle[i]}" (click)="toggle[i] = !toggle[i]"><button></button>{{item.name}}<button (click)="removeTodo(item.id)" class="remove"></button></li>
-        </ul>
-      </div>
-    </div>
+    </main>
+    <app-footer></app-footer>
   </div>
 
